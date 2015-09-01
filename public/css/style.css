@@ -7,18 +7,7 @@
     -webkit-font-smoothing: auto;
 }
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-nav,
-section,
-summary {
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
     display: block;
 }
 
@@ -37,7 +26,6 @@ body {
 
 .container{
     position: relative;
-    padding-right: 14rem;
     background-color: #FFF;
     vertical-align: middle;
 }
@@ -57,9 +45,9 @@ body {
 }
 
 #content{
-    padding: 2rem 2rem 2rem 16rem; /* move content */
+    padding: 2rem 2rem 2rem 14rem; /* move content */
     height: auto;
-    width: 100vw;
+    width: auto;
     background-color: #FFF;
 }
 
