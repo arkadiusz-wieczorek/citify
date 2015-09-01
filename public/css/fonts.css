@@ -1,0 +1,46 @@
+@font-face{
+    font-family: 'Lato Regular';
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    src: 
+        url('fonts/eot/lato-regular.eot') format('embedded-opentype'),
+        url('fonts/woff/lato-regular.woff') format('woff'),
+        url('fonts/ttf/lato-regular.ttf') format('truetype'),
+        url('fonts/otf/lato-regular.otf') format('opentype');
+}
+
+@font-face{
+    font-family: 'Source Sans Pro Light';
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    src: 
+        url('fonts/eot/SourceSansPro-Light.eot') format('embedded-opentype'),
+        url('fonts/woff/SourceSansPro-Light.otf.woff') format('woff'),
+        url('fonts/ttf/SourceSansPro-Light.ttf') format('truetype'),
+        url('fonts/otf/SourceSansPro-Light.otf') format('opentype');
+}
+
+@font-face{
+    font-family: 'Source Sans Pro Regular';
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    src:
+        url('fonts/eot/SourceSansPro-Regular.eot') format('embedded-opentype'),
+        url('fonts/woff/SourceSansPro-Regular.otf.woff') format('woff'),
+        url('fonts/ttf/SourceSansPro-Regular.ttf') format('truetype'),
+        url('fonts/otf/SourceSansPro-Regular.otf') format('opentype');
+}
+
+@font-face{
+    font-family: 'Inconsolata';
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    src:
+        url('fonts/woff/inconsolata.woff') format('woff'),
+        url('fonts/ttf/inconsolata.ttf') format('truetype'),
+        url('fonts/otf/inconsolata.eot') format('embedded-opentype');
+}
