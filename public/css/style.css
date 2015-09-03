@@ -45,12 +45,12 @@ body {
 }
 
 #content{
-    padding: 2rem 2rem 2rem 14rem; /* move content */
+    padding: 2rem 2rem 2rem 0rem; /* move content */
+    margin-left: 14rem;
     height: auto;
     width: auto;
     background-color: #FFF;
 }
-
 
 #footer {
 }
