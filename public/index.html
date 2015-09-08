@@ -6,63 +6,70 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <!-- inject:css -->
     <!-- endinject -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/fonts.css">
     <meta name="robots" content="all" />
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
 </head>
 
 <body>
     <div id="app">
-        <div class="container">
-            <div id="sidebar">sidebar with position: fixed</div>
-            <div id="header"></div>
-            <div id="content">
-                <div class="wrapper">
-                    <div class="article">
-                        <h2>Testowy tytuł</h2>
-                        <hr>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas vitae quam ac commodo. Aliquam erat volutpat. Pellentesque sed eros commodo, molestie mi sit amet, ultrices quam. Donec id malesuada lorem. Maecenas vulputate augue eu libero venenatis, sed tempor libero egestas.
+        <div id="sidebar">sidebar with position: fixed</div>
+        <div id="header"></div>
+        <div id="content">
+            <div class="wrapper">
+                <article class="preview-post">
+                    <div class="image">
+                        image
                     </div>
-                    <div class="article">
-                    <h2>Testowy tytuł</h2>
-                    <hr>
-                        Uisque vitae lectus at velit consectetur volutpat ut et metus. Integer nulla erat, rhoncus ut tellus ac, elementum congue nunc. Morbi tortor mauris, consectetur faucibus sapien convallis, fringilla dictum libero. Duis tincidunt condimentum diam ac malesuada.
+                    <div class="content">
+                        <h2>Lorem ipsum</h2>
+                        <p>Dodane przez @user</p>
+                        <div class="post-meta">
+                            <p class="icon">&#xe800;</p>
+                            <p>3 min temu</p>
+                            <p class="icon">&#xe803;</p>
+                            <p>2</p>
+                        </div>
+                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas vitae quam ac commodo.</span>
                     </div>
-                    <div class="article">
-                    <h2>Testowy tytuł</h2>
-                    <hr>
-                        Nunc at est venenatis, fermentum est sit amet, venenatis risus. Maecenas bibendum velit nec sodales lobortis. Nam bibendum diam nec mauris suscipit gravida. Curabitur porttitor faucibus molestie. Nullam fringilla et sapien sed porta.
+                </article>
+                <article class="preview-post">
+                    <div class="image">
+                        image
                     </div>
-                    <div class="article">
-                    <h2>Testowy tytuł</h2>
-                    <hr>
-                        Nullam vitae odio sed risus posuere volutpat. Nam ultrices, magna sit amet ullamcorper vulputate, est leo scelerisque sapien, eget iaculis nisi sapien sit amet ipsum. Mauris imperdiet auctor hendrerit.
+                    <div class="content">
+                        <h2>Dolor sit</h2>
+                        <p>Dodane przez @user</p>
+                        <div class="post-meta">
+                            <p class="icon">&#xe800;</p>
+                            <p>5 min temu</p>
+                            <p class="icon">&#xe803;</p>
+                            <p>10</p>
+                        </div>
+                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
                     </div>
-                    <div class="article">
-                    <h2>Testowy tytuł</h2>
-                    <hr>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas vitae quam ac commodo. Aliquam erat volutpat. Pellentesque sed eros commodo, molestie mi sit amet, ultrices quam. Donec id malesuada lorem. Maecenas vulputate augue eu libero venenatis, sed tempor libero egestas.
+                </article>
+                <article class="preview-post">
+                    <div class="image">
+                        image
                     </div>
-                    <div class="article">
-                    <h2>Testowy tytuł</h2>
-                    <hr>
-                        Uisque vitae lectus at velit consectetur volutpat ut et metus. Integer nulla erat, rhoncus ut tellus ac, elementum congue nunc. Morbi tortor mauris, consectetur faucibus sapien convallis, fringilla dictum libero. Duis tincidunt condimentum diam ac malesuada.
+                    <div class="content">
+                        <h2>Suspendisse egestas</h2>
+                        <p>Dodane przez @user</p>
+                        <div class="post-meta">
+                            <p class="icon">&#xe800;</p>
+                            <p>10 min temu</p>
+                            <p class="icon">&#xe803;</p>
+                            <p>0</p>
+                        </div>
+                        <span>Lorem ipsum dolor sit amet.</span>
                     </div>
-                    <div class="article">
-                    <h2>Testowy tytuł</h2>
-                    <hr>
-                        Nunc at est venenatis, fermentum est sit amet, venenatis risus. Maecenas bibendum velit nec sodales lobortis. Nam bibendum diam nec mauris suscipit gravida. Curabitur porttitor faucibus molestie. Nullam fringilla et sapien sed porta.
-                    </div>
-                    <div class="article">
-                    <h2>Testowy tytuł</h2>
-                    <hr>
-                        Nullam vitae odio sed risus posuere volutpat. Nam ultrices, magna sit amet ullamcorper vulputate, est leo scelerisque sapien, eget iaculis nisi sapien sit amet ipsum. Mauris imperdiet auctor hendrerit.
-                    </div>
-                </div>
+                </article>
             </div>
-            <div id="footer"></div>
         </div>
+        <div id="footer"></div>
+    </div>
     </div>
     <!-- inject:js -->
     <!-- endinject -->

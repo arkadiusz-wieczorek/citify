@@ -1,16 +1,4 @@
 @font-face{
-    font-family: 'Lato Regular';
-    font-weight: 400;
-    font-style: normal;
-    font-stretch: normal;
-    src: 
-        url('fonts/eot/lato-regular.eot') format('embedded-opentype'),
-        url('fonts/woff/lato-regular.woff') format('woff'),
-        url('fonts/ttf/lato-regular.ttf') format('truetype'),
-        url('fonts/otf/lato-regular.otf') format('opentype');
-}
-
-@font-face{
     font-family: 'Source Sans Pro Light';
     font-weight: 300;
     font-style: normal;
@@ -43,4 +31,16 @@
         url('fonts/woff/inconsolata.woff') format('woff'),
         url('fonts/ttf/inconsolata.ttf') format('truetype'),
         url('fonts/otf/inconsolata.eot') format('embedded-opentype');
+}
+
+@font-face{
+    font-family: 'fontello';
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    src:
+        url('font/fontello.eot') format('embedded-opentype'),
+        url('font/fontello.woff') format('woff'),
+        url('font/fontello.ttf') format('truetype'),
+        url('font/fontello.svg') format('svg');
 }
