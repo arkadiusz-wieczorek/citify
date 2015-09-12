@@ -4,13 +4,13 @@ var $ = require('jquery');
 
 var store = new Amygdala({
     'config': {
-        'apiUrl': 'http://localhost/api/v1',//url to API
+        'apiUrl': 'http://citify.in/api/'
         'idAttribute': 'url',
         'localStorage': true
     },
     'schema': {
         'articles': {
-            'url': '', //to articles
+            'url': '/article',
             idAttribute: "id"
         }
     }
@@ -20,16 +20,6 @@ var Articles = new function() {
 
     var ee = new EventEmitter();
     this.on = ee.on.bind(ee);
-
-    this.updateArticle = function(article_id, article_data) {
-        $.ajax({
-            method: "PATCH",
-            url: '/api/' //url to api
-            data: article_data
-        }).success(function (){
-            ee.emit('change');
-        });
-    };
 
     this.addArticle = function(article_data){
         var req = new XMLHttpRequest();
@@ -43,12 +33,22 @@ var Articles = new function() {
             req.open("POST", "/api/", true);
             req.send(article_data);
     };
+    
+    this.updateArticle = function(article_id, article_data) {
+        $.ajax({
+            method: "PATCH",
+            url: '/api/' //url to api
+            data: article_data
+        }).success(function (){
+            ee.emit('change');
+        });
+    };
 
-    this.getAricles = function(){
+    this.getArticles = function(){
         return store.get('aritcles');
     };
 
-    this.getAricleById = function(article_id){
+    this.getArticleById = function(article_id){
         return store.find('aritcles', {'id': article_id});
     };
 
