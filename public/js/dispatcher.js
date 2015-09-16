@@ -10,17 +10,36 @@ var store = new Amygdala({
     },
     'schema': {
         'articles': {
+            'url': '/article/list'
+        },
+        'article': {
             'url': '/article',
             idAttribute: "id"
         }
     }
 });
 
-var Articles = new function() {
+var Dispatcher = new function() {
 
     var ee = new EventEmitter();
     this.on = ee.on.bind(ee);
 
+    // http://citify.in/api/article/list?limit=20
+    this.getArticles = function(limit){
+        if (!limit) {
+            return store.get('aritcles');
+        } else {
+            var url = '/article/list?limit='+limit
+            return store.get('aritcles', {'url': url});
+        }
+    };
+
+    this.getArticleById = function(article_id){
+        // return store.find('aritcles', {'id': article_id});
+        var url = '/article/'+article_id
+        return store.get('article', {'url': url});
+    };
+    
     this.addArticle = function(article_data){
         var req = new XMLHttpRequest();
             req.onreadystatechange=function() {
@@ -30,28 +49,22 @@ var Articles = new function() {
 
                 }
             };
-            req.open("POST", "/api/", true);
+            req.open("POST", "/api/article/create/", true);
             req.send(article_data);
     };
     
     this.updateArticle = function(article_id, article_data) {
         $.ajax({
             method: "PATCH",
-            url: '/api/' //url to api
+            url: '/api/article/'+article_id+'/'
             data: article_data
         }).success(function (){
             ee.emit('change');
         });
     };
 
-    this.getArticles = function(){
-        return store.get('aritcles');
-    };
 
-    this.getArticleById = function(article_id){
-        return store.find('aritcles', {'id': article_id});
-    };
-
+    // to do
     this.deleteArticle = function(article_id){
         return store.remove('aritcles', {'id': "/"+article_id}).done(function(){
             ee.emit('change');
@@ -63,4 +76,4 @@ var Articles = new function() {
     };
 };
 
-module.exports = Aritcles;
+module.exports = Dispatcher;
