@@ -4,7 +4,7 @@ var $ = require('jquery');
 
 var store = new Amygdala({
     'config': {
-        'apiUrl': 'http://citify.in/api/'
+        'apiUrl': 'http://citify.in/api/',
         'idAttribute': 'url',
         'localStorage': true
     },
@@ -19,7 +19,7 @@ var store = new Amygdala({
     }
 });
 
-var Dispatcher = new function() {
+var Store = new function() {
 
     var ee = new EventEmitter();
     this.on = ee.on.bind(ee);
@@ -56,7 +56,7 @@ var Dispatcher = new function() {
     this.updateArticle = function(article_id, article_data) {
         $.ajax({
             method: "PATCH",
-            url: '/api/article/'+article_id+'/'
+            url: '/api/article/'+article_id+'/',
             data: article_data
         }).success(function (){
             ee.emit('change');
@@ -76,4 +76,4 @@ var Dispatcher = new function() {
     };
 };
 
-module.exports = Dispatcher;
+module.exports = Store;
