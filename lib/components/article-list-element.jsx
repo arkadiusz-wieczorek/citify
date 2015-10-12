@@ -19,7 +19,7 @@ var ArticleListElement = React.createClass({
 						<img src={article.thumbnail}/>
 					</div>
 					<div className="content">
-						<h2>{article.title}</h2>
+						<h2><Router.Link to="article-view" path="article-view" params={{id:article.id}}>{article.title}</Router.Link></h2>
 						<p>Dodane przez @{article.author.username}</p>
 						<div className="post-meta">
 							<p className="icon">&#xe800;</p>

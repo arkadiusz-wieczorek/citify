@@ -119,6 +119,12 @@ body {
     font-size: 2rem;
     margin-bottom: 1rem;
     line-height: 2rem;
+    text-decoration: none;
+}
+
+.preview-post a{
+    text-decoration: none;
+    color: hsl(0, 0%, 20%);
 }
 
 img {

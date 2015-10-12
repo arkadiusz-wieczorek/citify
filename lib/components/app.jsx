@@ -8,6 +8,7 @@ module.exports = Citify;
 
 Citify.ArticleListElement = require("./article-list-element.jsx");
 Citify.ArticleList = require("./article-list.jsx");
+Citify.ArticleView = require("./article-view.jsx");
 
 Citify.App = React.createClass({
 	mixins: [Router.State, Router.Navigation],
