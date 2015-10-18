@@ -25,11 +25,13 @@ var ArticleList = React.createClass({
 				<Citify.ArticleListElement key={article.id} article={article}/>
 			)
 		})
-		console.log(list_elements)
-		console.log(this.state.articles)
+		// console.log(list_elements)
+		// console.log(this.state.articles)
 		return (
-			<div className="ArticlesList">
-				{list_elements}				
+			<div id="content">
+				<div className="wrapper">
+					{list_elements}
+				</div>
 			</div>
 		);
 	}

@@ -6,30 +6,48 @@ var ArticleListElement = React.createClass({
 	render: function() {
 		var article = this.props.article;
 
-						// <Link name="Link" to={article.id}/>
-						// <Router.Link to="article-view" params={{resource_type_name:resource_type.name}}>
-						// 	<li id={resource_type.name} key={resource_type.name}>{resource_type.human_readable_name}</li>
-						// </Router.Link>
-						// <Router.Link to="article-view">
-						// 	<span>link</span>
-						// </Router.Link>
+		if (article.images[0] !== undefined) {
+			var link_to_image = article.images[0].image;
+
+			var image_div = (
+				<div className="image">
+					<img src={link_to_image}/>
+				</div>
+			)
+		}
+
+		var date = new Date(article.datetime_add * 1000);
+		var time = date.toTimeString().substr(0,5);
+		var cal = date.toISOString().substr(0,10);
+		var formatted_time = cal + " " + time;
+
+		//<h2><Router.Link to="article-view" path="article-view" params={{id:article.id}}>{article.title}</Router.Link></h2>
+
 		return (
 			<article className="preview-post">
-					<div className="image">
-						<img src={article.thumbnail}/>
+				<div className="content">
+					<div className="title">
+						<h2>{article.title}</h2>
 					</div>
-					<div className="content">
-						<h2><Router.Link to="article-view" path="article-view" params={{id:article.id}}>{article.title}</Router.Link></h2>
-						<p>Dodane przez @{article.author.username}</p>
-						<div className="post-meta">
-							<p className="icon">&#xe800;</p>
-							<p>{article.datetime_add}</p>
-							<p className="icon">&#xe803;</p>
-							<p>{article.comments_count}</p>
-						</div>
+					<div className="who">
+						<p>Dodane przez <span className="user">@{article.author.username}</span></p>
+					</div>
+					<div className="description">
 						<span>{article.content}</span>
 					</div>
-				</article>
+				</div>
+				{image_div}
+				<div className="meta">
+					<span>
+						<img src="img/icons/ic_place.png"/><p>{article.city.repr_name}</p>
+						<img src="img/icons/ic_comments.png"/><p>{article.comments_count}</p>
+						<img src="img/icons/ic_calendar.png"/><p>{formatted_time}</p>
+						<img src="img/icons/ic_upvote.png"/><p>{article.votes_plus}</p>
+						<img src="img/icons/ic_downvote.png"/><p>{article.votes_minus}</p>
+					</span>
+				</div>
+			</article>
+
 		)
 	}
 });
