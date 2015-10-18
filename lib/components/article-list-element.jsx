@@ -30,7 +30,7 @@ var ArticleListElement = React.createClass({
 						<h2>{article.title}</h2>
 					</div>
 					<div className="who">
-						<p>Dodane przez <span className="user">@{article.author.username}</span></p>
+						<p>DODANE PRZEZ </p><span className="user"> @{article.author.username.toUpperCase()}</span>
 					</div>
 					<div className="description">
 						<span>{article.content}</span>

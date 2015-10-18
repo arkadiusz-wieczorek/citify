@@ -3,7 +3,7 @@ var React = require("react");
 var Router = require("react-router");
 var Store = require("../stores/store.js");
 
-var ArticleList = React.createClass({
+var ArticleListTop = React.createClass({
 	mixins: [Router.State, Router.Navigation],
 	getInitialState: function() {
 		return {
@@ -12,7 +12,7 @@ var ArticleList = React.createClass({
 	},
 	componentDidMount: function() {
 		var self = this;
-		Store.getAllArticles(3)
+		Store.getTopArticles(3)
 			.then(function(response){
 				self.setState({
 					articles : response.results
@@ -32,12 +32,12 @@ var ArticleList = React.createClass({
 				<div className="wrapper">
 					<div className="buttons">
 						<Router.Link to="articles-latest" path="articles-latest">
-							<div className="button active">
+							<div className="button">
 								najnowsze
-						</div>
+							</div>
 						</Router.Link>
 						<Router.Link to="articles-top" path="articles-top">
-							<div className="button">
+							<div className="button active">
 								top
 							</div>
 						</Router.Link>
@@ -53,4 +53,4 @@ var ArticleList = React.createClass({
 	}
 });
 
-module.exports = ArticleList;
+module.exports = ArticleListTop;

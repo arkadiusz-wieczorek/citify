@@ -23,7 +23,7 @@ summary {
 }
 
 body {
-	font-family: 'Source Sans Pro Regular';
+	font-family: 'Roboto Regular';
 	font-size: 1rem;
 	font-weight: 300;
 	/*color: #384A58;*/
@@ -74,9 +74,9 @@ body {
 
 .buttons .button {
 	/*background-color: #FFF;*/
-	background-color: #EE534F;
-	box-shadow: 0px 0px 0.05rem #F16159;
-	color: #FFF;
+	background-color: #E7E7E7;
+	box-shadow: 0px 0px 0.2rem #B4B4B4;
+	color: #C1C1C1;
 	border-radius: 0.6rem;
 	width: 100%;
 	font-size: 1.45rem;
@@ -84,18 +84,49 @@ body {
 	line-height: 2.4rem;
 	vertical-align: middle;
 	text-align: center;
+	transition: all 300ms;
 }
 
-.buttons .button:nth-child(1) {
+.buttons .button.active{
+	color: #FFF;
+	background-color: #EE534F;
+	box-shadow: 0px 0px 0.05rem #F16159;
+}
+
+.buttons .button.active:hover{
+	color: #FFF;
+	background-color: #EE534F;
+	box-shadow: 0px 0px 0.05rem #F16159;
+}
+
+.buttons .button:hover{
+	color: #FFF;
+	background-color: #D1605A;
+	box-shadow: 0px 0px 0.05rem #F16159;
+}
+
+.buttons a{
+	width: 100%;
+	text-decoration: none;
+}
+
+.buttons a:nth-child(1){
+	margin-right: 0.65rem;
+}
+
+.buttons a:nth-child(2){
+	margin-left: 0.65rem;
+}
+/*.buttons .button:nth-child(1) {
 	margin-right: 0.65rem;
 }
 
 .buttons .button:nth-child(2) {
 	margin-left: 0.65rem;
-}
+}*/
 
 #content {
-	padding-top: 9rem;
+	/*padding-top: 9rem;*/
 }
 
 .preview-post {
@@ -115,29 +146,31 @@ body {
 }
 
 .preview-post h2 {
-	color: hsl(0, 0%, 34%);
+	color: hsl(0, 0%, 24%);
 	font-weight: 300;
-	font-size: 2rem;
+	font-family: 'Roboto Light';
+	font-size: 1.8rem;
 	margin-bottom: 1rem;
 	line-height: 1rem;
 	text-decoration: none;
 }
 
-.preview-post .who {
+.preview-post .who p{
 	text-transform: uppercase;
-	font-family: 'Source Sans Pro Light';
+	font-family: 'Roboto Light';
 	font-size: 1.1rem;
-	text-indent: 1px;
+	color: hsl(0,0%,70%);
 }
 
 .preview-post .user {
-	font-family: 'Source Sans Pro Regular';
+	font-family: 'Roboto Regular';
 	color: hsl(0, 0%, 60%);
+	font-size: 1.1rem;
 }
 
 .preview-post .description {
-	font-family: 'Source Sans Pro Light';
-	font-size: 1.6rem;
+	font-family: 'Roboto Light';
+	font-size: 1.4rem;
 	/* line-height: 3.2rem; */
 	margin-top: 2rem;
 	margin-bottom: 1rem;
@@ -161,9 +194,9 @@ body {
 	color: hsl(0, 0%, 57%);
 }
 
-.preview-post span {
+/*.preview-post span {
 	color: hsl(0, 0%, 37%);
-}
+}*/
 
 .preview-post .meta {
 	padding-top: 2rem;
@@ -173,6 +206,7 @@ body {
 	font-size: 1.2rem;
 	line-height: 2rem;
 	vertical-align: middle;
+	color: hsl(0,0%,40%);
 }
 
 .meta span img {
@@ -198,7 +232,7 @@ body {
 }
 
 #market img {
-	height: 10rem;
+	height: 8rem;
 	display: block;
 	margin: 0 auto;
 	transition: all 0.3s;
@@ -208,13 +242,13 @@ body {
 }
 
 #market img:hover {
-	height: 10rem;
+	height: 8rem;
 	-webkit-filter: grayscale(20%);
 	filter: grayscale(20%);
 }
 
 .android {
-	font-family: 'Source Sans Pro Light';
+	font-family: 'Roboto Light';
 	font-size: 2rem;
 	text-align: center;
 	vertical-align: middle;

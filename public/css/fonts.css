@@ -1,4 +1,26 @@
 @font-face{
+    font-family: 'Roboto Light';
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    src: 
+        url('fonts/eot/Roboto-Light.eot') format('embedded-opentype'),
+        url('fonts/woff/Roboto-Light.woff') format('woff'),
+        url('fonts/ttf/Roboto-Light.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Roboto Regular';
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    src:
+        url('fonts/eot/Roboto-Regular.eot') format('embedded-opentype'),
+        url('fonts/woff/Roboto-Regular.woff') format('woff'),
+        url('fonts/ttf/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face{
     font-family: 'Source Sans Pro Light';
     font-weight: 300;
     font-style: normal;
