@@ -3,6 +3,8 @@ var React = require("react");
 var Router = require("react-router");
 var Store = require("../stores/store.js");
 
+var Link = Router.Link;
+
 var ArticleList = React.createClass({
 	mixins: [Router.State, Router.Navigation],
 	getInitialState: function() {
@@ -26,26 +28,25 @@ var ArticleList = React.createClass({
 				<Citify.ArticleListElement key={article.id} article={article}/>
 			)
 		})
-
 		return (
 			<div>
 				<div className="wrapper">
 					<div className="buttons">
-						<Router.Link to="articles-latest" path="articles-latest">
+						<Link to="/latest">
 							<div className="button active">
 								najnowsze
 						</div>
-						</Router.Link>
-						<Router.Link to="articles-top" path="articles-top">
+						</Link>
+						<Link to="/top">
 							<div className="button">
 								top
 							</div>
-						</Router.Link>
+						</Link>
 					</div>
 				</div>
 				<div id="content">
 					<div className="wrapper">
-						{list_elements}
+						<div>{list_elements}</div>
 					</div>
 				</div>
 			</div>

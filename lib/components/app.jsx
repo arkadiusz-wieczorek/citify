@@ -12,6 +12,7 @@ Citify.ArticleListTop = require("./article-list-top.jsx");
 Citify.ArticleView = require("./article-view.jsx");
 
 Citify.App = React.createClass({
+				// <Router.RouteHandler/>
 	mixins: [Router.State, Router.Navigation],
 	render: function() {
 		return (
@@ -23,7 +24,7 @@ Citify.App = React.createClass({
 						</div>
 					</div>
 				</div>
-				<Router.RouteHandler/>
+				{this.props.children}
 				<div className="wrapper">
 					<div id="market">
 						<div className="android">
@@ -40,6 +41,6 @@ Citify.App = React.createClass({
 					</div>
 				</div>
 			</div>
-		);
+		)
 	}
 });

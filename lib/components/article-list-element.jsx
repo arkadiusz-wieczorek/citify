@@ -36,7 +36,7 @@ var ArticleListElement = React.createClass({
 						<span>{article.content}</span>
 					</div>
 				</div>
-				{image_div}
+				<div>{image_div}</div>
 				<div className="meta">
 					<span>
 						<img src="img/icons/ic_place.png"/><p>{article.city.repr_name}</p>
